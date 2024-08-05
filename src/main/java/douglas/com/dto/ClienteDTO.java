@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.time.LocalDate;
 
-public class ClientDTO {
+public class ClienteDTO {
     private String cpf;
     private String name;
     @JsonFormat(pattern = "yyyy-MM-dd")
@@ -12,11 +12,11 @@ public class ClientDTO {
     private String email;
 
     // Construtor padrão
-    public ClientDTO() {
+    public ClienteDTO() {
     }
 
     // Construtor com parâmetros
-    public ClientDTO(String cpf, String name, LocalDate dataNascimento, String email) {
+    public ClienteDTO(String cpf, String name, LocalDate dataNascimento, String email) {
         this.cpf = cpf;
         this.name = name;
         this.dataNascimento = dataNascimento;

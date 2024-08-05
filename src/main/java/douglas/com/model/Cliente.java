@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 
 import java.time.LocalDate;
 @Entity
-public class Client extends PanacheEntityBase {
+public class Cliente extends PanacheEntityBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +20,10 @@ public class Client extends PanacheEntityBase {
     private LocalDate dataNascimento;
     private String email;
 
-    public Client()  {
+    public Cliente()  {
     }
 
-    public Client(String cpf, String name, LocalDate dataNacimento, String email) {
+    public Cliente(String cpf, String name, LocalDate dataNacimento, String email) {
         this.cpf=cpf;
         this.name = name;
         this.dataNascimento = dataNacimento;

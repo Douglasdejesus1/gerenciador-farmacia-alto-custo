@@ -56,7 +56,7 @@ If you want to learn more about building native executables, please consult <htt
 ## Related Guides
 
 - REST ([guide](https://quarkus.io/guides/rest)): A Jakarta REST implementation utilizing build time processing and Vert.x. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
-- REST Client ([guide](https://quarkus.io/guides/rest-client)): Call REST services
+- REST Client ([guide](https://quarkus.io/guides/rest-cliente)): Call REST services
 - REST Qute ([guide](https://quarkus.io/guides/qute-reference#rest_integration)): Qute integration for Quarkus REST. This extension is not compatible with the quarkus-resteasy extension, or any of the extensions that depend on it.
 
 ## Provided Code
@@ -65,7 +65,7 @@ If you want to learn more about building native executables, please consult <htt
 
 Invoke different services through REST with JSON
 
-[Related guide section...](https://quarkus.io/guides/rest-client)
+[Related guide section...](https://quarkus.io/guides/rest-cliente)
 
 ### REST
 
