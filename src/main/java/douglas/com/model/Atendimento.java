@@ -1,6 +1,7 @@
 package douglas.com.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
@@ -13,7 +14,7 @@ public class Atendimento extends PanacheEntityBase {
     @ManyToOne
     @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente cliente;
-
+    @JsonbDateFormat("yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dataHora;
     private TipoAtendimento tipoAtendimento;
 

@@ -11,7 +11,7 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
-@Path("/atendimento")
+@Path("/atendimentos")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AtendimentoResource {
@@ -25,7 +25,9 @@ public class AtendimentoResource {
         try {
             Atendimento atendimento = atendimentoService.convertToEntity(atendimentoDTO);
             atendimentoService.createPesistAtendimento(atendimento);
-            return Response.status(Response.Status.CREATED).entity(atendimento).build();
+            AtendimentoDTO responseDTO = atendimentoService.convertToDTO(atendimento);
+
+            return Response.status(Response.Status.CREATED).entity(responseDTO).build();
         } catch (IllegalArgumentException e) {
             return Response.status(Response.Status.BAD_REQUEST).entity(e.getMessage()).build();
         }

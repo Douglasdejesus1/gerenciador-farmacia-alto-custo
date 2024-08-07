@@ -2,10 +2,7 @@ package douglas.com.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
@@ -20,13 +17,14 @@ public class Cliente extends PanacheEntityBase {
     private LocalDate dataNascimento;
     private String email;
 
+
     public Cliente()  {
     }
 
-    public Cliente(String cpf, String name, LocalDate dataNacimento, String email) {
+    public Cliente(String cpf, String name, LocalDate dataNascimento, String email) {
         this.cpf=cpf;
         this.name = name;
-        this.dataNascimento = dataNacimento;
+        this.dataNascimento = dataNascimento;
         this.email = email;
     }
 
@@ -69,5 +67,6 @@ public class Cliente extends PanacheEntityBase {
      public void setEmail(String email) {
          this.email = email;
      }
+
  }
    

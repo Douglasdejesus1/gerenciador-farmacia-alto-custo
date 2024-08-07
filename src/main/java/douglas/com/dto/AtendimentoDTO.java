@@ -1,12 +1,14 @@
 package douglas.com.dto;
 
 import douglas.com.model.TipoAtendimento;
+import jakarta.json.bind.annotation.JsonbDateFormat;
 
 import java.time.LocalDateTime;
 
 public class AtendimentoDTO {
 
     private Long clienteId;
+    @JsonbDateFormat("yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime dataHora;
     private TipoAtendimento tipoAtendimento;
 

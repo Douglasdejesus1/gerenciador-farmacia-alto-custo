@@ -82,6 +82,14 @@ public class AtendimentoService {
 
         );
     }
+
+    public AtendimentoDTO convertToDTO(Atendimento atendimento) {
+        AtendimentoDTO dto = new AtendimentoDTO();
+        dto.setClienteId(atendimento.getCliente().getId());
+        dto.setDataHora(atendimento.getDataHora());
+        dto.setTipoAtendimento(atendimento.getTipoAtendimento());
+        return dto;
+    }
     @Transactional
     public void createPesistAtendimento(Atendimento atendimento) {
         atendimentoRepository.persist(atendimento);
