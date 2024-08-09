@@ -56,7 +56,7 @@ class AtendimentoResourceTest {
                 .then()
                 .statusCode(400);
     }
-/*    @Test
+    @Test
     void testDeletarAtendimento_Sucesso() {
         Long id = 1L;
 
@@ -71,7 +71,7 @@ class AtendimentoResourceTest {
                 .delete("/atendimentos/{id}")
                 .then()
                 .statusCode(204); // Espera sucesso na exclusão
-    }*/
+    }
 
 
     @Test
